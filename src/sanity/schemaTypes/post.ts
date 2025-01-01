@@ -54,20 +54,5 @@ export const post = defineType({
             type:'author'
         }]
     })
-
-
-    // {
-    //     name:'gender',
-    //     type:'string',
-    //     title:'Gender',
-    //     options:{
-    //         list:[
-    //             {title:'Male',value:'male'},
-    //             {title:'Female',value:'female'}
-    //         ],
-    //         layout:'radio',
-    //         direction:'horizontal'
-    //     }
-    // }
   ],
 });
