@@ -2,6 +2,7 @@ import Image from "next/image";
 import { client } from "@/sanity/lib/client";
 import { urlFor } from "@/sanity/lib/image";
 import { PortableText } from "@portabletext/react";
+import Comments from "@/components/Comments";
 
 export const revalidate = 60; //seconds
 
@@ -65,11 +66,15 @@ export default async function BlogPostPage({ params: { slug } }: { params: { slu
                 marks: {
                   strong: ({ children }) => <strong style={{ fontFamily: 'Poppins, sans-serif' }}>{children}</strong>,
                 },
+                listItem: {
+                  bullet: ({ children }) => <li style={{ fontSize: '16px' }}>{children}</li>,
+                },
               }} 
             />
           </section>
         </div>
       </div>
+      <Comments />
     </article>
   );
 }
