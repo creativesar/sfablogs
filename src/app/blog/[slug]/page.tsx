@@ -68,6 +68,7 @@ export default async function BlogPostPage({ params: { slug } }: { params: { slu
                 },
                 listItem: {
                   bullet: ({ children }) => <li style={{ fontSize: '16px' }}>{children}</li>,
+                  number: ({ children }) => <li style={{ fontSize: '16px', listStyleType: 'decimal' }}>{children}</li>,
                 },
               }} 
             />
