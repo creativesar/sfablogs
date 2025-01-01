@@ -1,3 +1,0 @@
-import punycode from 'punycode';
-
-// ...existing code using punycode...
