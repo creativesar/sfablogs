@@ -11,8 +11,14 @@ export async function generateStaticParams() {
     "slug":slug.current
   }`;
   const slugs = await client.fetch(query);
-  const slugRoutes = slugs.map((item: { slug: string }) => item.slug);
-  return slugRoutes.map((slug: string) => ({ slug }));
+  const slugRoutes = slugs.map((item:{slug:string})=>(
+    item.slug
+  ));
+  // console.log(slugRoutes)
+  return slugRoutes.map((slug:string)=>(
+    {slug}
+  ))
+  
 }
 
 export default async function BlogPostPage({ params: { slug } }: { params: { slug: string } }) {
